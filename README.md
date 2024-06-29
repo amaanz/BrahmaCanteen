@@ -7,7 +7,7 @@ Cart Tab: Dedicated area for order review and payment processing, ensuring a smo
 Reviews System: Allows users to provide feedback, enhancing service quality and customer satisfaction.
 User Profiles: Integrated login system with a comprehensive order history tab for tracking and managing previous orders.
 
-Getting Started:
+# Getting Started:To view the project,
 # Clone the repository
 git clone https://github.com/amaanz/BrahmaCanteen.git
 
