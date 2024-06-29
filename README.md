@@ -10,26 +10,26 @@ This project is designed for takeaway food ordering at the Brahmaputra hostel ca
 
 **User Profiles** : Integrated login system with a comprehensive order history tab for tracking and managing previous orders.
 
-# Getting Started:To view the project,
-# Clone the repository
+## Getting Started:To view the project,
+## Clone the repository
 git clone https://github.com/amaanz/BrahmaCanteen.git
 
 cd BrahmaCanteen
 
-# Set up django
+## Set up django
 pip install django
 pip install djangorestframework
 
 #Navigate to the directory containing BrahmaCanteen, portalapp,manage.py,etc.
 
-# Set up the database
+## Set up the database
 python manage.py makemigrations
 python manage.py migrate
 
-# Create a superuser
+## Create a superuser
 python manage.py createsuperuser
 
-# Run the development server
+## Run the development server
 python manage.py runserver
 
 
