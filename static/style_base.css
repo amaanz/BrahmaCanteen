@@ -1,0 +1,41 @@
+* {
+    text-decoration: none;
+    font-family: 'Poppins' !important;
+  }
+  
+  body {
+    font-family: 'Poppins' !important;
+  }
+  
+  .nav-logo {
+    font-size: 25px;
+  }
+  
+  .nav-link {
+    font-size: 20px;
+  }
+  
+  .nav-button {
+    color: snow;
+    font-size: 18px;
+  }
+  .log-in,
+.sign-up,
+.log-out {
+    color: white;
+    font-size: larger !important;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 7px;
+    margin-left: 8px;
+}
+
+.log-in:hover,
+.sign-up:hover,
+.log-out:hover {
+    background-color: white;
+    color: #dc3545 !important;  /* Background color of navbar */
+    text-decoration: none;
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style_base.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %} || Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container-fluid">
+            <img src="static/logo2.png" alt="Logo" width="170" class="d-inline-block align-text-top me-md-2">
+            <div class='nav-logo'>
+                <a class="navbar-brand" href="/"><b>eat@brahma</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: larger;">
+                  {% if user.is_superuser %}
+                  <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Edit Menu</a>
+                  </li>
+                  {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Menu</a>
+                    </li>
+                  <li>
+                    <a class="nav-link active" href="/cart">Cart(<span id="cart">0</span>)</a>
+                </li>
+                  {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="/reviews">Reviews</a>
+                </li>
+                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <li class="nav-item">
+                  <a class="nav-link active" href="/manage_menu">Add Item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/all_orders">Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/view_bills">Bills</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link active" href="/my_orders">My orders</a>
+                </li>
+                {% endif %}
+                {% endif %}
+            </ul>
+            
+            {% if user.is_authenticated %}
+            
+            <div class="nav-button">
+                <a class="log-out" href="/profile">Profile</a>
+                <a class="log-out" href='/logout'>Logout</a>
+                
+                {% else %}
+                
+                <a class="log-in" href="/login">Login</a>
+                <a class="sign-up" href="/signup">SignUp</a>
+                
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% block body %} {% endblock body %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+{% block js %}{% endblock js %}
+<script>
+  if (localStorage.getItem('cart')==null){
+    var cart = {};
+  } else {
+    cart = JSON.parse(localStorage.getItem('cart'));
+  }
+  var total = 0;
+  for (var item in cart){
+    total = total + cart[item][0];
+    document.getElementById('cart').innerHTML = total;
+  }
+</script>
+  </body>
+</html>

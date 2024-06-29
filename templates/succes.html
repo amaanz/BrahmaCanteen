@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Successful{% endblock title %}
+
+{% block body %}
+<div class="container py-5 text-center">
+    <h1 class="display-4">Thank You!</h1>
+    <p class="lead">Your order has been placed successfully.</p>
+    <hr>
+    <p class="mb-0">We appreciate your business! If you have any questions, please feel free to <a href="/contact">contact us</a>.</p>
+    <p class="lead mt-4">
+        <a class="btn btn-primary btn-lg" href="/" role="button">Back to Home</a>
+        <a class="btn btn-secondary btn-lg" href="/my_orders" role="button">View My Orders</a>
+    </p>
+</div>
+{% endblock body %}
