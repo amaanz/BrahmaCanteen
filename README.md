@@ -1,7 +1,7 @@
-# Order-food-using-QR_code-
-A food ordering website for restaurant and café for dine-in and takeaway  
+# eat@brahma
+A food ordering website for Brahmaputra canteen for takeaway  
 
-This project is made for dine-in or takeaway food ordering at restaurant or cafe using qr code
+This project is made for takeaway food ordering at Brahmaputra hostel canteen
 
 To run the project run commands :
 
