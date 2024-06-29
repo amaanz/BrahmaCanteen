@@ -1,7 +1,7 @@
-# eat@brahma
+## eat@brahma
 This project is designed for takeaway food ordering at the Brahmaputra hostel canteen.
 
-# **Features**
+## **Features**
 **Menu System** : Users can browse and add items to their cart seamlessly.
 
 **Cart Tab** : Dedicated area for order review and payment processing, ensuring a smooth ordering experience.
