@@ -2,10 +2,13 @@
 This project is designed for takeaway food ordering at the Brahmaputra hostel canteen.
 
 # **Features**
-Menu System: Users can browse and add items to their cart seamlessly.
-Cart Tab: Dedicated area for order review and payment processing, ensuring a smooth ordering experience.
-Reviews System: Allows users to provide feedback, enhancing service quality and customer satisfaction.
-User Profiles: Integrated login system with a comprehensive order history tab for tracking and managing previous orders.
+**Menu System** : Users can browse and add items to their cart seamlessly.
+
+**Cart Tab** : Dedicated area for order review and payment processing, ensuring a smooth ordering experience.
+
+**Reviews System** : Allows users to provide feedback, enhancing service quality and customer satisfaction.
+
+**User Profiles** : Integrated login system with a comprehensive order history tab for tracking and managing previous orders.
 
 # Getting Started:To view the project,
 # Clone the repository
